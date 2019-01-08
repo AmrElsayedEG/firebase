@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome {{name}}</title>
+</head>
+<body>
+Welcome {{name}}
+<button type="button" onclick="location.href='{% url 'logout' %}'">Logout</button>
+<br><br>
+{% for time,date,work in comb %}
+Date: {{date}} &nbsp; work: <a href="/post_check/?z={{time}}">{{work}}</a>
+<br>
+{% endfor %}
+</body>
+</html>
